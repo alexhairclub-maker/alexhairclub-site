@@ -220,6 +220,35 @@ h2 em{font-style:italic;font-weight:400;color:var(--ink)}
 .intro-sub{font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:#888;margin-top:26px;opacity:0;animation:lnFade .8s ease 1.05s forwards}
 @keyframes lnFade{to{opacity:1}}
 @media(max-width:380px){.intro-txt{font-size:2.6rem}}
+
+/* ===== DESKTOP / COMPUTER LAYOUT (tablets/laptops/desktops only — phones keep the layout above) ===== */
+@media(min-width:900px){
+  body{
+    max-width:1200px;
+    padding:0 40px 40px;
+    column-count:2;
+    column-gap:36px;
+    column-fill:balance;
+  }
+  .topbar,.hero,.footer{column-span:all}
+  .hero{padding:72px 40px 56px}
+  .hero-btns{flex-direction:row;max-width:560px;gap:14px}
+  .btn-main{flex:1}
+  .btn-row{flex:1}
+  h2{font-size:2.8rem}
+  .sec,.social-sec{
+    break-inside:avoid;
+    border:1px solid var(--line);
+    border-radius:16px;
+    margin-bottom:28px;
+    padding:40px 36px;
+  }
+  .sticky-cta{display:none}
+  .popup-ov{align-items:center}
+  .popup-box{width:min(90vw,480px);max-width:480px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .intro{max-width:none}
+  .intro-txt{max-width:640px;margin:0 auto}
+}
 </style>
 </head>
 <body>
