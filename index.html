@@ -184,6 +184,11 @@ h2 em{font-style:italic;font-weight:400;color:var(--ink)}
 .pp-tip b{font-weight:600}
 .pp-cta{display:block;background:var(--ink);color:#fff;text-align:center;padding:16px;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;cursor:pointer;border-radius:999px}
 .pp-cl{text-align:center;font-size:.68rem;color:var(--muted);cursor:pointer;display:block;letter-spacing:.1em;font-weight:400}
+.gp-logo{height:44px;width:auto;display:block;margin:0 auto 14px}
+.gp-score{font-family:'Fraunces',serif;font-size:3.2rem;font-weight:400;line-height:1;text-align:center;color:var(--ink)}
+.gp-stars{text-align:center;color:var(--ink);font-size:1.3rem;letter-spacing:4px;margin:8px 0 12px}
+.gp-rat{text-align:center;font-size:.95rem;font-weight:500;color:var(--ink);margin-bottom:24px}
+a.pp-cta{text-decoration:none}
 
 /* FOOTER */
 .footer{padding:36px 24px 40px;text-align:center;background:var(--ink);color:#fff}
@@ -435,12 +440,25 @@ h2 em{font-style:italic;font-weight:400;color:var(--ink)}
   </div>
 </div>
 
+<div class="popup-ov" id="gpOv">
+  <div class="popup-box">
+    <svg class="gp-logo" viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg" aria-label="Google">
+      <text x="2" y="32" font-size="28" font-weight="700" font-family="Arial,sans-serif"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC04">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text>
+    </svg>
+    <div class="gp-score">5.0</div>
+    <div class="gp-stars">★★★★★</div>
+    <p class="gp-rat" id="gRat">784 αξιολογήσεις Google</p>
+    <a class="pp-cta" id="gCta" href="https://www.google.com/search?q=alex+mens+hair+club" target="_blank" rel="noopener">Δες και τις 784 αξιολογήσεις →</a>
+    <span class="pp-cl" id="gCl" onclick="closeGp()">Ίσως αργότερα</span>
+  </div>
+</div>
+
 <script>
 const T={el:{hTag:'Barbershop · Νέα Μουδανιά · Est. 2009',hRat:'784 αξιολογήσεις Google',bBook:'Κλείσε Ραντεβού',sbBook:'Κλείσε Ραντεβού',bPh:'📞 Κάλεσέ μας',bMap:'📍 Οδηγίες',sServ:'Υπηρεσίες',h2Serv:'Τι <em>Προσφέρουμε</em>',sHrs:'Ωράριο',h2Hrs:'Πότε <em>Είμαστε</em><br>Ανοιχτά',sRev:'Αξιολογήσεις',h2Rev:'Τι Λένε οι<br><em>Πελάτες μας</em>',rCta:'Δες και τις 784 αξιολογήσεις →',sBrands:'Χρησιμοποιούμε',sFaq:'Συχνές Ερωτήσεις',sMap:'Πού θα μας βρεις',sCont:'Επικοινωνία',h2Cont:'Βρες <em>μας</em>',sSoc:'Ακολούθησέ μας',ppTag:'Καλώς ήρθες',ppTitle:'Πρώτη φορά;',ppDesc:'🔔 Νέο: Λίστα Αναμονής στο online booking!  Δεν βρήκες ώρα που σε βολεύει; Μπες στη λίστα αναμονής και δήλωσε τις ώρες που σου ταιριάζουν. Μόλις ελευθερωθεί ραντεβού, θα λάβεις αυτόματα email για να το κλείσεις πρώτος — πριν το προλάβει άλλος! ✂️',ppCta:'Κλείσε Ραντεβού Τώρα',ppCl:'Ίσως αργότερα',notTxt:'<strong>Από 1η Ιουνίου 2025</strong> ισχύει ο νέος τιμοκατάλογος. Ευχαριστούμε 🙏',openTxt:'Τώρα Ανοιχτά',closedTxt:'Τώρα Κλειστά',closedToday:'Κλειστά σήμερα'},en:{hTag:'Barbershop · N. Moudania · Est. 2009',hRat:'784 Google reviews',bBook:'Book Appointment',sbBook:'Book Appointment',bPh:'📞 Call Us',bMap:'📍 Directions',sServ:'Services',h2Serv:'What We <em>Offer</em>',sHrs:'Hours',h2Hrs:'When We Are <em>Open</em>',sRev:'Reviews',h2Rev:'What Our<br><em>Clients Say</em>',rCta:'See all 784 reviews →',sBrands:'We Use',sFaq:'FAQ',sMap:'Find Us',sCont:'Contact',h2Cont:'Find <em>Us</em>',sSoc:'Follow Us',ppTag:'Welcome',ppTitle:'First time?',ppDesc:'Book online in 30 seconds. No waiting, no phone call.<span class="pp-tip"><b>⚡ Tip:</b> If no slot is available on your preferred day or time, book the nearest available one and note that you would like to be seen earlier. We will contact you as soon as a cancellation comes up.</span>',ppCta:'Book Now',ppCl:'Maybe later',notTxt:'<strong>From June 1st 2025</strong> new price list applies. Thank you 🙏',openTxt:'Open Now',closedTxt:'Closed Now',closedToday:'Closed today'},de:{hTag:'Barbershop · N. Moudania · Seit 2009',hRat:'784 Google-Bewertungen',bBook:'Termin Buchen',sbBook:'Termin Buchen',bPh:'📞 Anrufen',bMap:'📍 Wegbeschreibung',sServ:'Leistungen',h2Serv:'Was Wir <em>Bieten</em>',sHrs:'Öffnungszeiten',h2Hrs:'Wann Wir <em>Geöffnet</em> Haben',sRev:'Bewertungen',h2Rev:'Was Unsere<br><em>Kunden Sagen</em>',rCta:'Alle 784 Bewertungen ansehen →',sBrands:'Wir Verwenden',sFaq:'FAQ',sMap:'So Finden Sie Uns',sCont:'Kontakt',h2Cont:'Finden Sie <em>Uns</em>',sSoc:'Folgen Sie Uns',ppTag:'Willkommen',ppTitle:'Zum ersten Mal hier?',ppDesc:'Buchen Sie online in 30 Sekunden. Kein Warten, kein Anruf.<span class="pp-tip"><b>⚡ Tipp:</b> Wenn an Ihrem bevorzugten Tag oder zu Ihrer bevorzugten Zeit kein Termin frei ist, buchen Sie den nächstgelegenen freien Termin und vermerken Sie, dass Sie gerne früher drankommen möchten. Wir melden uns, sobald ein Termin frei wird.</span>',ppCta:'Jetzt Buchen',ppCl:'Vielleicht später',notTxt:'<strong>Ab 1. Juni 2025</strong> gilt die neue Preisliste. Vielen Dank 🙏',openTxt:'Jetzt Geöffnet',closedTxt:'Jetzt Geschlossen',closedToday:'Heute geschlossen'},fr:{hTag:'Barbershop · N. Moudania · Depuis 2009',hRat:'784 avis Google',bBook:'Prendre Rendez-vous',sbBook:'Prendre Rendez-vous',bPh:'📞 Appelez-nous',bMap:'📍 Itinéraire',sServ:'Services',h2Serv:'Ce Que Nous <em>Proposons</em>',sHrs:'Horaires',h2Hrs:'Quand Nous Sommes <em>Ouverts</em>',sRev:'Avis',h2Rev:'Ce Que Disent<br><em>Nos Clients</em>',rCta:'Voir les 784 avis →',sBrands:'Nous Utilisons',sFaq:'FAQ',sMap:'Où Nous Trouver',sCont:'Contact',h2Cont:'Retrouvez-<em>Nous</em>',sSoc:'Suivez-Nous',ppTag:'Bienvenue',ppTitle:'Première visite ?',ppDesc:'Réservez en ligne en 30 secondes. Sans attente, sans appel.<span class="pp-tip"><b>⚡ Astuce :</b> si aucun créneau n\'est disponible au jour ou à l\'heure souhaités, réservez le créneau libre le plus proche et indiquez que vous souhaitez passer plus tôt. Nous vous contacterons dès qu\'une place se libère.</span>',ppCta:'Réserver Maintenant',ppCl:'Peut-être plus tard',notTxt:'<strong>Depuis le 1er juin 2025</strong>, la nouvelle grille tarifaire est en vigueur. Merci 🙏',openTxt:'Ouvert Maintenant',closedTxt:'Fermé Maintenant',closedToday:'Fermé aujourd\'hui'}};
 let lang='el';
 function g(id){return document.getElementById(id)}
 function s(id,v){if(g(id))g(id).innerHTML=v}
-function setL(l){lang=l;const t=T[l];document.querySelectorAll('.lb').forEach(b=>b.classList.toggle('act',b.textContent.toLowerCase().includes(l)));['hTag','hRat','bBook','bPh','bMap','sServ','h2Serv','sHrs','h2Hrs','sRev','h2Rev','rCta','sBrands','sFaq','sMap','sCont','h2Cont','sSoc','ppTag','ppTitle','ppDesc','ppCta','ppCl','notTxt','sbBook'].forEach(id=>s(id,t[id]));checkOpen();}
+function setL(l){lang=l;const t=T[l];document.querySelectorAll('.lb').forEach(b=>b.classList.toggle('act',b.textContent.toLowerCase().includes(l)));['hTag','hRat','bBook','bPh','bMap','sServ','h2Serv','sHrs','h2Hrs','sRev','h2Rev','rCta','sBrands','sFaq','sMap','sCont','h2Cont','sSoc','ppTag','ppTitle','ppDesc','ppCta','ppCl','notTxt','sbBook'].forEach(id=>s(id,t[id]));s('gRat',t.hRat);s('gCta',t.rCta);s('gCl',t.ppCl);checkOpen();}
 function checkOpen(){const now=new Date();const gr=new Date(now.toLocaleString('en-US',{timeZone:'Europe/Athens'}));const d=gr.getDay(),h=gr.getHours(),m=gr.getMinutes(),t=h+m/60;const dot=g('ld'),txt=g('lt'),hrs=g('lh');let open=false,hs='';if(d>=2&&d<=5){open=t>=9&&t<21;hs='09:00–21:00';}else if(d===6){open=t>=9&&t<17.5;hs='09:00–17:30';}else{hs=T[lang].closedToday;}dot.className='live-dot '+(open?'open':'closed');txt.textContent=open?T[lang].openTxt:T[lang].closedTxt;hrs.textContent=hs;}
 function tf(id){const item=g(id);const was=item.classList.contains('op');document.querySelectorAll('.faq-item.op').forEach(el=>el.classList.remove('op'));if(!was)item.classList.add('op');}
 checkOpen();setInterval(checkOpen,60000);
@@ -449,16 +467,18 @@ document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 window.addEventListener('load',()=>{
   const intro=document.getElementById('intro');
   const showPopup=(delay)=>{if(!sessionStorage.getItem('popupSeen')){setTimeout(()=>{const ov=document.querySelector('.popup-ov');if(ov)ov.classList.add('show');},delay);}};
+  const showGp=(delay)=>{if(sessionStorage.getItem('gpSeen')){showPopup(delay);return;}setTimeout(()=>{const o=document.getElementById('gpOv');if(o)o.classList.add('show');},delay);};
+  window.closeGp=()=>{const o=document.getElementById('gpOv');if(o)o.classList.remove('show');sessionStorage.setItem('gpSeen','1');showPopup(500);};
   if(intro && !sessionStorage.getItem('introSeen')){
     sessionStorage.setItem('introSeen','1');
     setTimeout(()=>{
       intro.classList.add('hide');
       setTimeout(()=>{intro.style.display='none';},700);
     },2800);
-    showPopup(6500); // μετά το intro + λίγη ώρα στη σελίδα
+    showGp(3600); // Google popup αμέσως μετά το intro, μετά το κανονικό popup
   } else {
     if(intro)intro.style.display='none';
-    showPopup(2500); // κανονικό timing όταν δεν παίζει το intro
+    showGp(1200); // όταν δεν παίζει το intro
   }
 });
 </script>
